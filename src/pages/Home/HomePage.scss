@@ -61,3 +61,16 @@
     padding: 100px 0 50px;
   }
 }
+
+@media screen and(max-width: 576px) {
+  .card-wrapper{
+    flex-direction: column;
+  }
+  .catalogue-wrapper{
+    flex-direction: column;
+  }
+
+  .members-wrapper{
+    flex-direction: column;
+  }
+}
