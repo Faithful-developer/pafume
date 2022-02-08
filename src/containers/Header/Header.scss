@@ -4,31 +4,105 @@
   left: 0;
   width: 100%;
   top: 0;
+  padding: 20px 0;
+  z-index: 100;
+  transition: all ease 0.5s;
+  display: block;
+
+  &.active {
+    background: #ffffff;
+    padding: 20px 0;
+
+    a {
+      color: #2E3E60;
+    }
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
-  
-  &-left{
-    a{
+
+  .mobile-header-button {
+    display: none;
+  }
+
+  &-left {
+    a {
       font-weight: bold;
       font-size: 25px;
-      color: white;
+      color: #ffffff;
 
     }
   }
-  &-center{
+
+  &-center {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    li{
-      a{
+
+    li {
+      a {
         display: inline-block;
         color: white;
+        padding: 10px 15px;
+        transition: all ease 0.5s;
 
+        &:hover {
+          color: #DD87A5;
+        }
       }
+    }
+  }
+
+  &-right {
+    a {
+      color: white;
+      position: relative;
+      padding-left: 30px;
+      display: inline-block;
+      transition: all ease 0.5s;
+
+      &::before {
+        content: "";
+        background: url('../../assets/images/icons/phone.svg') no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &:hover {
+        color: #DD87A5;
+      }
+    }
+  }
+
+  @media screen and(max-width: 769px) {
+    .header {
+      &-center, &-right {
+        display: none;
+      }
+    }
+    .mobile-header-button{
+      position: relative;
+      z-index: 20;
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      img{
+        width: 40px
+      }
+    }
+    .mobile-header {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
   }
 }

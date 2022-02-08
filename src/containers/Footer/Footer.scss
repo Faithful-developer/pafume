@@ -1,0 +1,141 @@
+.footer {
+  background: #151C2B;
+  padding: 50px 0;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .main {
+      .logo {
+        font-weight: bold;
+        font-size: 25px;
+        color: #ffffff;
+      }
+
+      .social-networks {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+          a {
+            margin: 10px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #DD87A5;
+            border-radius: 50%;
+            transition: all ease 0.5s;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:hover {
+              background: #6C20C7;
+            }
+          }
+        }
+      }
+    }
+
+    .box {
+      h3 {
+        font-weight: bold;
+        font-size: 25px;
+        color: #ffffff;
+      }
+    }
+
+    .pages {
+      ul {
+        list-style: none;
+
+        li {
+          a {
+            display: inline-block;
+            position: relative;
+            padding-left: 20px;
+            color: white;
+            transition: all ease 0.5s;
+
+            &:hover {
+              color: #DD87A5;
+            }
+
+            &::before {
+              content: '';
+              background: url('../../assets/images/icons/left.svg') no-repeat;
+              width: 15px;
+              transform: rotate(180deg);
+              height: 15px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin-top: auto;
+              margin-bottom: auto;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      ul {
+        list-style: none;
+
+        li {
+          line-height: 2;
+
+          a {
+            display: inline-block;
+            position: relative;
+            padding-left: 25px;
+            transition: all ease 0.5s;
+            color: #ffffff;
+
+            &:hover {
+              color: #DD87A5;
+            }
+          }
+          .location {
+            &::before {
+              content: "";
+              background: url('../../assets/images/icons/location.svg') no-repeat;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin-top: auto;
+              margin-bottom: auto;
+              background-size: contain;
+            }
+          }
+          .phone {
+            &::before {
+              content: "";
+              background: url('../../assets/images/icons/phone.svg') no-repeat;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin-top: auto;
+              margin-bottom: auto;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

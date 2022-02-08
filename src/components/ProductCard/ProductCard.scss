@@ -1,0 +1,15 @@
+.product-card{
+  max-width: 250px;
+  a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    img{
+      width: 100%;
+    }
+    h3{
+      font-size: 24px;
+      color: #2E3E60;
+    }
+  }
+}

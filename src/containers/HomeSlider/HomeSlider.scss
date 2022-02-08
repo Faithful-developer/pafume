@@ -1,0 +1,27 @@
+.home-slider{
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content{
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    h1{
+      color: #ffffff;
+      font-size: 35px;
+    }
+    p{
+      color: #DD87A5;
+    }
+  }
+}
