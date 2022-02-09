@@ -14,17 +14,19 @@ import 'aos'
 import 'aos/dist/aos.css';
 import {useState} from "react";
 import HeaderMobile from "./containers/HeaderMobile";
+import ContactPage from "./pages/Contact";
+import Catalog from "./pages/Catalog";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
     const [mobileMenu, setMobileMenu] = useState(false)
 
     mobileMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
-    console.log(mobileMenu)
 
     return (
         <div className="App">
             <Header mobileMenu={mobileMenu} setMobileMenu={setMobileMenu}/>
-            <HeaderMobile mobileMenu={mobileMenu} />
+            <HeaderMobile mobileMenu={mobileMenu}  setMobileMenu={setMobileMenu} />
             <Routes>
                 <Route exact path='/' element={<HomePage/>}/>
                 <Route
@@ -32,6 +34,9 @@ const App = () => {
                     element={<Navigate to="/"/>}
                 />
                 <Route path='/about' element={<AboutPage/>}/>
+                <Route path='/catalog' element={<Catalog/>} />
+                <Route path='/product/:id' element={<ProductPage/>} />
+                <Route path='/contact' element={<ContactPage/>} />
                 <Route path='*' element={<ErrorPage/>}/>
             </Routes>
         </div>

@@ -1,0 +1,32 @@
+.catalog-single-card{
+  box-shadow: 0 4px 10px 0 #8F8685;
+  width: 300px;
+  list-style: none;
+  margin: 20px 0;
+  transition: all ease 0.5s;
+  &:hover{
+    box-shadow: 0 0 0 0 #ffffff;
+  }
+  a{
+    .img-section{
+      width: 100%;
+      img{
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+      }
+    }
+    .text-section{
+      padding: 30px 20px;
+      h2{
+        color: #2E3E60;
+        font-size: 25px;
+      }
+      p{
+        color: #8F8685;
+        font-size: 18px;
+      }
+    }
+  }
+}
+

@@ -1,5 +1,5 @@
 .shadow{
-  position: absolute;
+  position: fixed;
   width: 0;
   left: 0;
   top: 0;
@@ -18,7 +18,7 @@
 
 @media screen and(max-width:768px){
   .header-mobile{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -150%;
     display: flex;
